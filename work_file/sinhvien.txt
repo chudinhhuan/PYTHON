@@ -1,0 +1,3 @@
+01	chu dinh huan	d19cqvt	nghe an
+02	tran thuy linh	d19ngan hang	thanh chuong
+& C:/Users/admin/AppData/Local/Programs/Python/Python310/python.exe d:/PYTHON/pandas/demo1.py	& C:/Users/admin/AppData/Local/Programs/Python/Python310/python.exe d:/PYTHON/pandas/demo1.py		

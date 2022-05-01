@@ -1,0 +1,85 @@
+1.Selection_sort
+# cach lam 1
+def selection_sort(arr):
+    for i in range(0,len(arr)):
+        my_list = i
+        for j in range(i,len(arr)):
+            if arr[j] < arr[my_list]:
+                my_list = j
+        arr [i],arr[my_list] = arr[my_list],arr[i]
+        #return arr
+li=[10,9,1,5,8]
+selection_sort(li)
+print(li)
+#cach lam 2
+def selection_sort(lst):
+    for i in range(0,len(lst)):
+        min_tam = i
+        for j in range(i+1,len(lst)):
+            if lst[j] < lst[min_tam]:
+                min_tam = j
+        lst[i],lst[min_tam] = lst[min_tam],lst[i]
+        return lst
+
+2.Insertion_sort 
+def insertion_sort(my_lst,num):
+
+    flag = False
+    for i,v in enumerate(my_lst):
+        if num < v:
+            flag = True
+            break
+    if flag:
+        found_inx = i
+    else:
+        found_inx = len(my_lst)
+    my_lst.append('')
+
+    for i in range(len(my_lst)-1,found_inx,-1):
+        my_lst[i] = my_lst[i-1]
+    my_lst[found_inx] = num
+    return my_lst
+#use sort
+def sap_xep(lst1):
+    lst1_ = []
+    for j in range(len(lst1)):
+        insertion_sort(lst1_,lst1[j])
+    return lst1_
+
+3.bubble_sort
+def bubble_sort(lst):
+    for i in range(len(lst)):
+        for j in range(len(lst)-i-1):
+            if lst[j] > lst[j+1]:
+                lst[j],lst[j+1] = lst[j+1],lst[j]
+
+4.Binary search
+---binary search ==========
+def binary_search(lst,x):
+    l = 0
+    r = len(lst)-1
+    while l <= r:
+        mid = (r+l) // 2
+        if lst[mid] == x:
+            return mid
+        elif lst[mid] < x:
+            l = mid + 1
+        else:
+            r = mid - 1
+lst = [1,3,4,5,7,8,9,10,12,14,16,20]
+print(binary_search(lst,9))
+
+#Bai 4 viet lai thuat toan buble sort
+
+print('Bai4====')
+
+m=[6,5,3,1,8,7,2,4]
+lst=range(len(m)-1,-1,-1)
+for i in lst:
+	for j in range(0,i,1):   # for j=0 ;j<i;j++ 
+		if m[j]<m[j+1]:
+			tam=m[j]
+			m[j]=m[j+1]
+			m[j+1]=tam
+print(m)
+
